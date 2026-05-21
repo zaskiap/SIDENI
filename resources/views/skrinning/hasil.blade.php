@@ -17,23 +17,23 @@
 
     $rekMap = [
         'Risiko Tinggi' => [
-            ['icon'=>'🏥','text'=>'Segera kunjungi fasilitas kesehatan terdekat (Puskesmas, Klinik VCT, atau RS) untuk melakukan tes HIV resmi.'],
-            ['icon'=>'🧪','text'=>'Lakukan tes VCT atau PITC untuk mendapatkan kepastian status HIV.'],
-            ['icon'=>'🤝','text'=>'Diskusikan kondisi Anda secara jujur dengan tenaga kesehatan. Semua informasi dijaga kerahasiaannya.'],
-            ['icon'=>'🛡️','text'=>'Hindari perilaku berisiko seperti berganti pasangan tanpa kondom dan penggunaan jarum suntik bersama.'],
-            ['icon'=>'💊','text'=>'Jika terkonfirmasi positif, terapi ARV tersedia gratis di layanan kesehatan pemerintah.'],
+            ['text'=>'Segera kunjungi fasilitas kesehatan terdekat (Puskesmas, Klinik VCT, atau RS) untuk melakukan tes HIV resmi.'],
+            ['text'=>'Lakukan tes VCT atau PITC untuk mendapatkan kepastian status HIV.'],
+            ['text'=>'Diskusikan kondisi Anda secara jujur dengan tenaga kesehatan. Semua informasi dijaga kerahasiaannya.'],
+            ['text'=>'Hindari perilaku berisiko seperti berganti pasangan tanpa kondom dan penggunaan jarum suntik bersama.'],
+            ['text'=>'Jika terkonfirmasi positif, terapi ARV tersedia gratis di layanan kesehatan pemerintah.'],
         ],
         'Risiko Sedang' => [
-            ['icon'=>'🏥','text'=>'Konsultasikan hasil skrining ini dengan dokter atau tenaga kesehatan untuk evaluasi lebih lanjut.'],
-            ['icon'=>'🧪','text'=>'Pertimbangkan melakukan tes HIV (VCT/PITC) untuk mendapatkan kepastian.'],
-            ['icon'=>'🛡️','text'=>'Kurangi perilaku berisiko dan tingkatkan perilaku hidup sehat.'],
-            ['icon'=>'📅','text'=>'Lakukan pemeriksaan kesehatan rutin setidaknya setiap 6 bulan sekali.'],
+            ['text'=>'Konsultasikan hasil skrining ini dengan dokter atau tenaga kesehatan untuk evaluasi lebih lanjut.'],
+            ['text'=>'Pertimbangkan melakukan tes HIV (VCT/PITC) untuk mendapatkan kepastian.'],
+            ['text'=>'Kurangi perilaku berisiko dan tingkatkan perilaku hidup sehat.'],
+            ['text'=>'Lakukan pemeriksaan kesehatan rutin setidaknya setiap 6 bulan sekali.'],
         ],
         'Risiko Rendah' => [
-            ['icon'=>'✅','text'=>'Pertahankan gaya hidup sehat dan perilaku seksual yang aman.'],
-            ['icon'=>'📅','text'=>'Tetap lakukan pemeriksaan kesehatan rutin secara berkala.'],
-            ['icon'=>'💡','text'=>'Tingkatkan pengetahuan tentang HIV/AIDS untuk perlindungan diri yang lebih baik.'],
-            ['icon'=>'🤝','text'=>'Ingat: skrining ini BUKAN pengganti tes HIV. Hanya tes laboratorium yang bisa memastikan status HIV.'],
+            ['text'=>'Pertahankan gaya hidup sehat dan perilaku seksual yang aman.'],
+            ['text'=>'Tetap lakukan pemeriksaan kesehatan rutin secara berkala.'],
+            ['text'=>'Tingkatkan pengetahuan tentang HIV/AIDS untuk perlindungan diri yang lebih baik.'],
+            ['text'=>'Ingat: skrining ini BUKAN pengganti tes HIV. Hanya tes laboratorium yang bisa memastikan status HIV.'],
         ],
     ];
     $rekomendasi = $rekMap[$hasil] ?? $rekMap['Risiko Rendah'];
@@ -103,7 +103,7 @@
             <div class="hasil-card-title">REKOMENDASI TINDAKAN</div>
             <div class="hasil-rek-list">
                 @foreach($rekomendasi as $r)
-                <div class="hasil-rek-item"><span class="hasil-rek-icon">{{ $r['icon'] }}</span><span>{{ $r['text'] }}</span></div>
+                <div class="hasil-rek-item"><span>{{ $r['text'] }}</span></div>
                 @endforeach
             </div>
             <div class="hasil-disclaimer">Hasil skrining ini <strong>BUKAN DIAGNOSIS MEDIS</strong> dan tidak menggantikan pemeriksaan laboratorium. Hanya tes HIV (VCT/PITC) yang dapat memastikan status HIV secara akurat.</div>

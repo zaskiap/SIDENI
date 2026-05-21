@@ -11,7 +11,7 @@
     <div class="admin-content">
         @include('admin.partials.topbar')
         <main class="admin-main">
-            <h1 class="admin-page-title">Pelaporan</h1>
+            <h1 class="admin-page-title">Pelaporan</h1><br>
             <p style="font-size:13px;color:#666;margin-bottom:20px">
                 Data dalam tabel dibawah ini merupakan data hasil skrining yang telah dilakukan oleh pengguna
             </p>

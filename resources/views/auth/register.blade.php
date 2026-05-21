@@ -32,7 +32,7 @@
                 <div class="form-group">
                     <label class="form-label">Password</label>
                     <div class="input-pw-wrap">
-                        <input type="password" id="reg_pw" name="password" placeholder="Minimal 6 karakter" class="form-input" required autocomplete="new-password">
+                        <input type="password" id="reg_pw" name="password" placeholder="Minimal 8 karakter" class="form-input" required autocomplete="new-password">
                         <button type="button" class="toggle-pw" onclick="togglePw('reg_pw',this)">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94"/><path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
                         </button>
@@ -53,7 +53,7 @@
             {{-- STEP 2 --}}
             <div class="reg-step hidden" id="step-2">
                 <div class="form-group">
-                    <label class="form-label">Nama (Opsional)</label>
+                    <label class="form-label">Nama</label>
                     <input type="text" name="nama" id="reg_nama" value="{{ old('nama') }}" placeholder="Nama atau alias" class="form-input" maxlength="100" oninput="syncName(this.value)">
                 </div>
                 <div class="form-group">

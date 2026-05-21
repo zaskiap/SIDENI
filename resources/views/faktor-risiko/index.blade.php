@@ -45,7 +45,6 @@
         <div class="fr-card">
             <div class="fr-card-head">
                 <div class="fr-card-title-wrap">
-                    <span class="fr-card-icon">📋</span>
                     <span class="fr-card-title">Pilih Faktor Risiko</span>
                     <span class="fr-badge" id="frBadge">{{ count($user->faktor_aktif) }} dipilih</span>
                 </div>
@@ -67,7 +66,7 @@
                     @endforeach
                 </div>
                 <div class="fr-actions">
-                    <button type="submit" class="btn-fr-save">💾 Simpan Perubahan</button>
+                    <button type="submit" class="btn-fr-save">Simpan Perubahan</button>
                     <button type="button" class="btn-fr-reset" onclick="resetUnsaved()">↺ Reset</button>
                 </div>
             </form>
@@ -76,7 +75,6 @@
         {{-- FAKTOR RISIKO TERSIMPAN --}}
         <div class="fr-card">
             <div class="fr-card-head">
-                <span class="fr-card-icon">🕓</span>
                 <span class="fr-card-title">Faktor Risiko Tersimpan</span>
             </div>
             <p class="fr-card-desc">Daftar faktor risiko yang saat ini tercatat di profil Anda.</p>

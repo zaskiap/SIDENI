@@ -88,11 +88,11 @@
             <div class="tentang-team-grid">
                 @php
                     $team = [
-                        ['foto'=>'team1.jpeg','nama'=>'Anita Setyowati','nim'=>'G41241509'],
-                        ['foto'=>'team2.jpeg','nama'=>'Dhieta Ayu Larasati','nim'=>'G41241295'],
-                        ['foto'=>'team3.jpeg','nama'=>'Reny Diah Pujiastuti','nim'=>'G41241543'],
+                        ['foto'=>'team1.jpeg','nama'=>'Reny Diah Pujiastuti','nim'=>'G41241543'],
+                        ['foto'=>'team2.jpeg','nama'=>'Zaskia Putri R.P','nim'=>'G41241272'],
+                        ['foto'=>'team3.jpeg','nama'=>'Anita Setyowati','nim'=>'G41241509'],
                         ['foto'=>'team4.jpeg','nama'=>'Shafira Maharani A','nim'=>'G41241223'],
-                        ['foto'=>'team5.jpeg','nama'=>'Zaskia Putri R.P','nim'=>'G41241272'],
+                        ['foto'=>'team5.jpeg','nama'=>'Dhieta Ayu Larasati','nim'=>'G41241295'],
                     ];
                 @endphp
                 @foreach($team as $t)

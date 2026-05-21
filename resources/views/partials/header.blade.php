@@ -1,32 +1,9 @@
 <header class="sideni-header">
     <div class="header-inner">
-        <a href="{{ route('home') }}" class="header-logo">
-            <svg width="32" height="32" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0">
-                <g style="animation:spin-slow 18s linear infinite;transform-origin:90px 90px">
-                    <circle cx="90" cy="20" r="4" fill="#8b0000" opacity="0.3"/>
-                    <circle cx="148" cy="48" r="3" fill="#8b0000" opacity="0.2"/>
-                    <circle cx="160" cy="110" r="4" fill="#8b0000" opacity="0.3"/>
-                    <circle cx="65" cy="168" r="4" fill="#8b0000" opacity="0.3"/>
-                    <circle cx="22" cy="138" r="3" fill="#8b0000" opacity="0.2"/>
-                    <circle cx="18" cy="75" r="4" fill="#8b0000" opacity="0.3"/>
-                </g>
-                <circle cx="90" cy="90" r="72" fill="none" stroke="#8b0000" stroke-width="1" stroke-dasharray="5 8" opacity="0.18"/>
-                <g><line x1="90" y1="90" x2="90" y2="30" stroke="#8b0000" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/><circle cx="90" cy="27" r="6" fill="#8b0000" opacity="0.85"/></g>
-                <g><line x1="90" y1="90" x2="148" y2="52" stroke="#8b0000" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/><circle cx="151" cy="50" r="6" fill="#8b0000" opacity="0.85"/></g>
-                <g><line x1="90" y1="90" x2="148" y2="128" stroke="#8b0000" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/><circle cx="151" cy="130" r="6" fill="#8b0000" opacity="0.85"/></g>
-                <g><line x1="90" y1="90" x2="90" y2="150" stroke="#8b0000" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/><circle cx="90" cy="153" r="6" fill="#8b0000" opacity="0.85"/></g>
-                <g><line x1="90" y1="90" x2="32" y2="128" stroke="#8b0000" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/><circle cx="29" cy="130" r="6" fill="#8b0000" opacity="0.85"/></g>
-                <g><line x1="90" y1="90" x2="32" y2="52" stroke="#8b0000" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/><circle cx="29" cy="50" r="6" fill="#8b0000" opacity="0.85"/></g>
-                <circle cx="90" cy="90" r="27" fill="#8b0000" opacity="0.9"/>
-                <circle cx="82" cy="85" r="3" fill="#fff" opacity="0.35"/>
-                <circle cx="90" cy="90" r="3" fill="#fff" opacity="0.25"/>
-                <circle cx="98" cy="95" r="3" fill="#fff" opacity="0.35"/>
-            </svg>
-            <div>
-                <span class="logo-title">S I D E N I</span>
-                <span class="logo-sub">SISTEM DETEKSI DINI HIV/AIDS</span>
-            </div>
-        </a>
+        <div>
+            <span class="logo-title">S I D E N I</span><br>
+            <span class="logo-sub">SISTEM DETEKSI DINI HIV/AIDS</span>
+        </div>
 
         @if(isset($auth) && $auth)
         <nav class="header-nav">
