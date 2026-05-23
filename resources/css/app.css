@@ -2694,7 +2694,8 @@ a {
     background: #fff;
     border: 1px solid #e5e5e5;
     border-radius: 10px;
-    overflow: hidden;
+    overflow: visible;
+    margin-bottom: 20px;
 }
 .admin-table-head {
     display: flex;
@@ -2979,14 +2980,16 @@ a {
 .admin-filter-panel {
     position: absolute;
     right: 0;
-    top: calc(100%+4px);
+    top: calc(100% + 4px);
     width: 260px;
     background: #fff;
     border: 1px solid #e5e5e5;
     border-radius: 10px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-    z-index: 100;
+    z-index: 9999;
     padding: 14px;
+    max-height: 350px;
+    overflow-y: auto;
 }
 .admin-filter-section {
     border-bottom: 1px solid #f0f0f0;
@@ -3222,29 +3225,34 @@ a {
 }
 .admin-logout-actions {
     display: flex;
-    gap: 10px;
+    gap: 20px;
     justify-content: center;
 }
 .btn-cancel-logout {
     flex: 1;
-    padding: 8px;
+    width: 100%;
+    padding: 10px 8px; /* Sedikit ditambah padding atas-bawahnya */
     border: 1.5px solid #e5e5e5;
     border-radius: 7px;
     background: #fff;
-    font-size: 13px;
+    color: #333; /* Warna teks abu-abu gelap/hitam */
+    font-size: 14px;
     font-weight: 600;
     cursor: pointer;
+    text-align: center;
 }
 .btn-confirm-logout {
     flex: 1;
-    padding: 8px;
-    background: #3b82f6;
+    width: 100%;
+    padding: 10px 8px;
+    background: #3b82f6; /* Warna biru primer */
     color: #fff;
     border: none;
     border-radius: 7px;
-    font-size: 13px;
-    font-weight: 700;
+    font-size: 14px;
+    font-weight: 600;
     cursor: pointer;
+    text-align: center;
 }
 
 @media (max-width: 768px) {
