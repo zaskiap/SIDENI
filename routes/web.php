@@ -30,6 +30,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/skrinning',      [SkrinningController::class,   'index'])->name('skrinning');
     Route::post('/skrinning',     [SkrinningController::class,   'simpan'])->name('skrinning.simpan');
     Route::get('/hasil',          [SkrinningController::class,   'hasil'])->name('hasil');
+    Route::get('/hasil/{id}',     [SkrinningController::class,   'hasilDetail'])->name('hasil.detail');
     Route::get('/riwayat',        [SkrinningController::class,   'riwayat'])->name('riwayat');
     Route::get('/faktor-risiko',  [FaktorRisikoController::class,'index'])->name('faktor-risiko');
     Route::post('/faktor-risiko', [FaktorRisikoController::class,'update'])->name('faktor-risiko.update');

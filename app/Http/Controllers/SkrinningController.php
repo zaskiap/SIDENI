@@ -59,6 +59,14 @@ class SkrinningController extends Controller
         return view('skrinning.hasil', compact('skrinning', 'user'));
     }
 
+    public function hasilDetail($id) {
+        $user      = Auth::user();
+        $skrinning = Skrinning::where('id_skrinning', $id)
+                                ->where('user_id', $user->id)
+                                ->firstOrFail();
+        return view('skrinning.hasil', compact('skrinning', 'user'));
+    }
+
     public function riwayat() {
         $user      = Auth::user();
         $riwayat   = Skrinning::where('user_id', $user->id)
