@@ -68,21 +68,11 @@
 <body class="sideni-body">
     @include('partials.header',['auth'=>true])
     <main>
-        {{-- HERO BANNER --}}
         <div class="tentang-hero">
             <img src="{{ asset('images/banner-tentang.png') }}" alt="Tentang SIDENI" class="tentang-hero-img">
         </div>
-
         <div class="tentang-main">
             <div class="tentang-wrap">
-                <a href="{{ route('beranda') }}" class="page-back">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="10" />
-                        <polyline points="12,8 8,12 12,16" />
-                        <line x1="16" y1="12" x2="8" y2="12" />
-                    </svg>
-                    Tentang
-                </a>
                 <div class="breadcrumb-bar">
                     <a href="{{ route('beranda') }}" class="bc-link">Beranda</a>
                     <span class="bc-sep">›</span><span>Tentang</span>
@@ -183,14 +173,22 @@
                     ['foto'=>'team5.jpeg','nama'=>'Dhieta Ayu Larasati','nim'=>'G41241295'],
                     ];
                     @endphp
-                    @foreach($team as $t)
-                    <div class="team-card">
-                        <div class="team-photo-wrap">
-                            <img src="{{ asset('images/'.$t['foto']) }}" alt="{{ $t['nama'] }}" class="team-photo">
+                    @foreach($team as $index => $t)
+                    @if($index == 3)
+                    <div class="team-row-bottom">
+                        @endif
+
+                        <div class="team-card">
+                            <div class="team-photo-wrap">
+                                <img src="{{ asset('images/'.$t['foto']) }}" alt="{{ $t['nama'] }}" class="team-photo">
+                            </div>
+                            <div class="team-name">{{ $t['nama'] }}</div>
+                            <div class="team-nim">{{ $t['nim'] }}</div>
                         </div>
-                        <div class="team-name">{{ $t['nama'] }}</div>
-                        <div class="team-nim">{{ $t['nim'] }}</div>
+
+                        @if($index == 4)
                     </div>
+                    @endif
                     @endforeach
                 </div>
             </div>

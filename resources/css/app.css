@@ -294,7 +294,7 @@ a {
     border: 1px solid #e5e5e5;
     border-radius: 10px;
     padding: 36px 44px; /* sebelumnya 48px 56px */
-    max-width: 860px;
+    max-width: 960px;
     width: 100%;
 }
 
@@ -2052,7 +2052,7 @@ a {
    ================================================ */
 .berita-hero {
     width: 100%;
-    height: 180px;
+    height: 160px;
     overflow: hidden;
 }
 .berita-hero-img {
@@ -2065,8 +2065,10 @@ a {
     padding: 24px 20px 48px;
 }
 .berita-wrap {
-    max-width: 900px;
+    max-width: 1020px;
     margin: 0 auto;
+    padding: 24px 28px;
+    margin-bottom: 16px;
 }
 .berita-page-header {
     text-align: center;
@@ -2148,12 +2150,12 @@ a {
     padding: 24px 20px 48px;
 }
 .berita-detail-wrap {
-    max-width: 1000px;
+    max-width: 1020px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 260px;
     gap: 24px;
     align-items: start;
+    padding: 24px 28px;
+    margin-bottom: 16px;
 }
 .berita-detail-content {
 }
@@ -2278,11 +2280,13 @@ a {
     padding: 24px 20px 48px;
 }
 .tentang-wrap {
-    max-width: 860px;
+    max-width: 1020px;
     margin: 0 auto;
+    padding: 24px 28px;
+    margin-bottom: 16px;
 }
 .tentang-section-title {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 800;
     color: #1a1a1a;
     margin: 20px 0 24px;
@@ -2297,6 +2301,8 @@ a {
 .tentang-logo-wrap {
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding-top: 85px;
 }
 .tentang-text p {
     font-size: 13.5px;
@@ -2350,6 +2356,15 @@ a {
 .team-nim {
     font-size: 11px;
     color: #888;
+}
+.team-row-bottom {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+.team-row-bottom .team-card {
+    flex: 0 0 calc(33.333% - 11px);
 }
 
 /* ================================================
