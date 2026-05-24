@@ -13,7 +13,7 @@
         <main class="admin-main">
             <h1 class="admin-page-title">Daftar Pengguna</h1><br>
             <p style="font-size:13px;color:#666;margin-bottom:20px">
-                Data dalam tabel dibawah ini merupakan data pengguna yang melakukan skrinning
+                Data dalam tabel dibawah ini merupakan data pengguna yang telah melakukan registrasi pada sistem SIDENI.
             </p>
 
             <div class="admin-table-card">

@@ -88,9 +88,6 @@
                     </div>
                 </form>
             </div>
-            <div class="fr-back-row">
-                <a href="{{ route('berita') }}" class="btn-fr-back">← Kembali ke Berita</a>
-            </div>
         </main>
         @include('admin.partials.footer')
     </div>
