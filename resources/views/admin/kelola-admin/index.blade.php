@@ -112,7 +112,7 @@
                                         {{-- Tombol hapus tidak muncul jika ini akun sendiri --}}
                                         @if($adm->id !== session('admin')['id'])
                                             <form method="POST" action="{{ route('admin.kelola-admin.destroy', $adm->id) }}"
-                                                  onsubmit="return confirm('Hapus admin {{ $adm->name }}?')">
+                                                  onsubmit="return confirm('Apakah anda yakin ingin menghapus {{ $adm->name }}?')">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit" class="btn-delete-admin">
