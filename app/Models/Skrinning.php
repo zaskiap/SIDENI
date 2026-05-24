@@ -12,9 +12,9 @@ class Skrinning extends Model
         'g_sariawan','g_sakit_kepala','g_badan_lelah','g_radang_tenggorokan',
         'g_hilang_nafsu_makan','g_nyeri_otot','g_ruam_tubuh',
         'g_bengkak_kelenjar_leher','g_bengkak_kelenjar_ketiak',
-        'g_kurang_sel_darah_putih','g_turun_bb_kurang_10',
-        'g_jamur_mulut','g_jamur_tenggorokan','g_turun_bb_lebih_10',
-        'g_diare_1_bulan','g_tbc_paru','g_infeksi_bakteri_berat',
+        'g_luka_yang_lama_sembuh','g_turun_bb_kurang_3kg',
+        'g_jamur_mulut','g_radang_tenggorokan_3','g_turun_bb_lebih_3kg',
+        'g_diare_1_bulan','g_gangguan_pernafasan','g_infeksi_bakteri_berat',
     ];
     protected $casts = [
         'tanggal' => 'date',
@@ -23,10 +23,10 @@ class Skrinning extends Model
         'g_hilang_nafsu_makan' => 'boolean', 'g_nyeri_otot' => 'boolean',
         'g_ruam_tubuh' => 'boolean', 'g_bengkak_kelenjar_leher' => 'boolean',
         'g_bengkak_kelenjar_ketiak' => 'boolean',
-        'g_kurang_sel_darah_putih' => 'boolean', 'g_turun_bb_kurang_10' => 'boolean',
-        'g_jamur_mulut' => 'boolean', 'g_jamur_tenggorokan' => 'boolean',
-        'g_turun_bb_lebih_10' => 'boolean', 'g_diare_1_bulan' => 'boolean',
-        'g_tbc_paru' => 'boolean', 'g_infeksi_bakteri_berat' => 'boolean',
+        'g_luka_yang_lama_sembuh' => 'boolean', 'g_turun_bb_kurang_3kg' => 'boolean',
+        'g_jamur_mulut' => 'boolean', 'g_radang_tenggorokan_3' => 'boolean',
+        'g_turun_bb_lebih_3kg' => 'boolean', 'g_diare_1_bulan' => 'boolean',
+        'g_gangguan_pernafasan' => 'boolean', 'g_infeksi_bakteri_berat' => 'boolean',
     ];
 
     // Semua kolom gejala dengan label
@@ -41,13 +41,13 @@ class Skrinning extends Model
             'g_ruam_tubuh'             => ['label' => 'Ruam-ruam Pada Tubuh', 'fase' => 1, 'skor' => 10],
             'g_bengkak_kelenjar_leher' => ['label' => 'Pembengkakan Kelenjar Getah Bening di Leher', 'fase' => 1, 'skor' => 10],
             'g_bengkak_kelenjar_ketiak'=> ['label' => 'Pembengkakan Kelenjar Getah Bening di Ketiak', 'fase' => 1, 'skor' => 10],
-            'g_kurang_sel_darah_putih' => ['label' => 'Berkurangnya Sel Darah Putih Secara Drastis', 'fase' => 2, 'skor' => 15],
-            'g_turun_bb_kurang_10'     => ['label' => 'Penurunan Berat Badan < 10% Tanpa Sebab Jelas', 'fase' => 2, 'skor' => 15],
+            'g_luka_yang_lama_sembuh'  => ['label' => 'Luka yang lama sembuh', 'fase' => 2, 'skor' => 15],
+            'g_turun_bb_kurang_3kg'    => ['label' => 'Penurunan Berat Badan kurang dari 3 kg Tanpa Sebab Jelas', 'fase' => 2, 'skor' => 15],
             'g_jamur_mulut'            => ['label' => 'Infeksi Jamur Pada Mulut', 'fase' => 3, 'skor' => 20],
-            'g_jamur_tenggorokan'      => ['label' => 'Infeksi Jamur Pada Tenggorokan', 'fase' => 3, 'skor' => 20],
-            'g_turun_bb_lebih_10'      => ['label' => 'Penurunan Berat Badan > 10% Tanpa Sebab Jelas', 'fase' => 3, 'skor' => 20],
+            'g_radang_tenggorokan_3'   => ['label' => 'Radang tenggorokan lebih dari 3 minggu', 'fase' => 3, 'skor' => 20],
+            'g_turun_bb_lebih_3kg'     => ['label' => 'Penurunan Berat Badan drastis lebih dari 3 kg Tanpa Sebab Jelas', 'fase' => 3, 'skor' => 20],
             'g_diare_1_bulan'          => ['label' => 'Diare Lebih dari 1 Bulan Tanpa Sebab', 'fase' => 3, 'skor' => 20],
-            'g_tbc_paru'               => ['label' => 'Tuberkulosis Paru', 'fase' => 3, 'skor' => 20],
+            'g_gangguan_pernafasan'    => ['label' => 'Gangguan sistem pernafasan, sesak, dan batuk lebih dari 3 minggu', 'fase' => 3, 'skor' => 20],
             'g_infeksi_bakteri_berat'  => ['label' => 'Infeksi Bakteri Berat (Pneumonia, Kanker, dll)', 'fase' => 3, 'skor' => 20],
         ];
     }

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Tambah Berita - SIDENI Admin</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ckeditor5@41.4.2/dist/browser/ckeditor5.css">
     @vite(['resources/css/app.css','resources/js/app.js'])
 </head>
 <body class="admin-body">
@@ -56,8 +57,7 @@
 
                     <div class="admin-form-group">
                         <label class="admin-form-label">ISI BERITA <span class="required">*</span></label>
-                        <textarea name="isi" rows="12" class="admin-form-input admin-form-textarea {{ $errors->has('isi')?'input-error':'' }}" placeholder="Tulis isi berita di sini..." required>{{ old('isi') }}</textarea>
-                        <p style="font-size:11px;color:#888;margin-top:4px">Anda dapat menggunakan tag HTML seperti &lt;p&gt;, &lt;h3&gt;, &lt;ul&gt;, &lt;li&gt;, &lt;strong&gt;</p>
+                        <textarea id="editor" name="isi" rows="12" class="admin-form-input admin-form-textarea" placeholder="Tulis isi berita di sini...">{{ old('isi') }}</textarea>
                     </div>
 
                     <div class="admin-form-group">
