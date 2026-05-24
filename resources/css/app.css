@@ -2175,6 +2175,8 @@ a {
     font-size: 13.5px;
     color: #333;
     line-height: 1.8;
+    margin-bottom: 14px;
+    text-align: justify;
 }
 .berita-detail-isi h3 {
     font-size: 15px;
