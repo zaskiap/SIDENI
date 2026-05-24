@@ -10,10 +10,6 @@
 @include('partials.header',['auth'=>true])
 <main class="fr-main">
     <div class="fr-wrap">
-        <a href="{{ route('beranda') }}" class="page-back">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12,8 8,12 12,16"/><line x1="16" y1="12" x2="8" y2="12"/></svg>
-            Faktor risiko
-        </a>
         <div class="breadcrumb-bar">
             <a href="{{ route('beranda') }}" class="bc-link">Beranda</a>
             <span class="bc-sep">›</span><span>Faktor Risiko</span>
@@ -91,11 +87,6 @@
                 <p style="font-size:13px;color:#aaa;padding:8px 0">Belum ada faktor risiko yang tersimpan.</p>
             @endif
         </div>
-
-        <div class="fr-back-row">
-            <a href="{{ route('beranda') }}" class="btn-fr-back">← Kembali ke Beranda</a>
-        </div>
-    </div>
 </main>
 @include('partials.footer')
 @include('partials.logout-modal')

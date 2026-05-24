@@ -13,7 +13,7 @@
         <main class="admin-main">
             <h1 class="admin-page-title">Daftar Pengguna</h1><br>
             <p style="font-size:13px;color:#666;margin-bottom:20px">
-                Data dalam tabel dibawah ini merupakan data pengguna yang melakukan skrinning
+                Data dalam tabel dibawah ini merupakan data pengguna yang telah melakukan registrasi pada sistem SIDENI.
             </p>
 
             <div class="admin-table-card">
@@ -40,13 +40,13 @@
                     </form>
 
                     {{-- FILTER BUTTON --}}
-                    <div style="position:relative">
+                    <div style="position: relative; display: inline-block;">
                         <button class="btn-admin-filter" onclick="toggleFilter(event)">
                             Filter
                             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="22,3 2,3 10,12.46 10,19 14,21 14,12.46"/></svg>
                         </button>
 
-                        <div class="admin-filter-panel" id="filterPanel" style="display:none">
+                        <div class="admin-filter-panel" id="filterPanel">
                             <form method="GET" action="{{ route('admin.pengguna') }}" id="filterForm">
                                 <input type="hidden" name="per_page" value="{{ $perPage }}">
 
@@ -175,6 +175,21 @@
                         @endif
                     </span>
                     <div class="admin-pagination">{{ $pengguna->links('vendor.pagination.admin') }}</div>
+                </div>
+            </div>
+
+            <div class="admin-table-card">
+                <div style="padding:14px 16px;font-size:13px;font-weight:700;color:#8b0000;border-bottom:1px solid #f0f0f0">
+                    Informasi Tambahan
+                </div>
+                 <div style="padding:12px 16px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px">
+                    <p style="font-size:13px;color:#555">
+                        Berikut merupakan informasi terkait mengenai Faktor Risiko yang terdapat pada data pengguna:<br><br>
+                        <strong>Faktor Risiko 1 </strong>: Sering mengonsumsi alkohol<br><br>
+                        <strong>Faktor Risiko 2 </strong>: Sering berganti pasangan seksual<br><br>
+                        <strong>Faktor Risiko 3 </strong>: Pernah menggunakan jarum suntik bersama<br><br>
+                        <strong>Faktor Risiko 4 </strong>: Sering melakukan hubungan seksual tanpa kondom<br><br>
+                    </p>
                 </div>
             </div>
         </main>

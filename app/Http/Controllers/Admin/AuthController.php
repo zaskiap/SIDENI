@@ -26,7 +26,15 @@ class AuthController extends Controller
             return back()->withErrors(['email' => 'Email atau password salah.'])->withInput();
         }
 
-        session(['admin' => ['id' => $admin->id, 'name' => $admin->name, 'email' => $admin->email]]);
+        session([
+            'admin' => [
+                'id'    => $admin->id,
+                'name'  => $admin->name,
+                'email' => $admin->email,
+                'role'  => $admin->role, // ← tambah ini
+            ]
+        ]);
+
         return redirect()->route('admin.beranda');
     }
 

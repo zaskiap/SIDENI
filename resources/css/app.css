@@ -294,7 +294,7 @@ a {
     border: 1px solid #e5e5e5;
     border-radius: 10px;
     padding: 36px 44px; /* sebelumnya 48px 56px */
-    max-width: 860px;
+    max-width: 960px;
     width: 100%;
 }
 
@@ -775,9 +775,14 @@ a {
     gap: 10px;
     justify-content: center;
 }
+.logout-actons form {
+    flex: 1;
+    display: block;
+}
 .logout-btn-cancel {
     flex: 1;
     padding: 9px; /* sebelumnya 12px */
+    min-height: 38px;
     border: 1.5px solid #e5e5e5;
     border-radius: 8px;
     background: #fff;
@@ -790,8 +795,10 @@ a {
     background: #f5f5f5;
 }
 .logout-btn-confirm {
+    width: 100%;
     flex: 1;
     padding: 9px;
+    min-height: 38px;
     background: #3b82f6;
     color: #fff;
     border: none;
@@ -914,7 +921,7 @@ a {
 }
 
 .profile-wrap {
-    max-width: 860px;
+    max-width: 960px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -1093,7 +1100,7 @@ a {
 
 .pcard-btn-dark {
     padding: 7px 18px;
-    background: #3a3a3a;
+    background: #1a1a1a;
     color: #fff;
     font-size: 11.5px;
     font-weight: 700;
@@ -1697,16 +1704,12 @@ a {
     flex-shrink: 0;
 }
 .hasil-disclaimer {
-    background: linear-gradient(
-        135deg,
-        rgba(139, 0, 0, 0.07),
-        rgba(244, 67, 54, 0.03)
-    );
-    border: 1px solid rgba(139, 0, 0, 0.18);
+    background: #fffbeb;
+    border: 1px solid #fcd34d;
     border-radius: 10px;
     padding: 12px 14px 12px 40px;
     font-size: 12px;
-    color: #666;
+    color: #555;
     line-height: 1.65;
     position: relative;
 }
@@ -1766,7 +1769,7 @@ a {
     padding: 24px 20px 48px;
 }
 .riwayat-wrap {
-    max-width: 820px;
+    max-width: 960px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -1795,7 +1798,7 @@ a {
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background: #8b0000;
+    background: #666;
     color: #fff;
     font-size: 18px;
     font-weight: 800;
@@ -1853,7 +1856,7 @@ a {
     padding: 24px 20px 48px;
 }
 .fr-wrap {
-    max-width: 820px;
+    max-width: 960px;
     margin: 0 auto;
 }
 .fr-header-card {
@@ -1898,10 +1901,10 @@ a {
 .fr-status-count {
     font-size: 13px;
     font-weight: 700;
-    color: #8b0000;
+    color: #f59e0b;
 }
 .fr-status-count.has-risiko {
-    color: #8b0000;
+    color: #f59e0b;
 }
 .alert-success {
     background: #d4edda;
@@ -1998,7 +2001,7 @@ a {
 .btn-fr-save {
     flex: 1;
     padding: 11px;
-    background: #8b0000;
+    background: #2563eb;
     color: #fff;
     font-size: 13px;
     font-weight: 700;
@@ -2008,7 +2011,7 @@ a {
     transition: background 0.2s;
 }
 .btn-fr-save:hover {
-    background: #6b0000;
+    background: #0a52bc;
 }
 .btn-fr-reset {
     padding: 11px 18px;
@@ -2046,20 +2049,6 @@ a {
     background: #8b0000;
     flex-shrink: 0;
 }
-.fr-back-row {
-    margin-top: 8px;
-}
-.btn-fr-back {
-    display: inline-block;
-    padding: 9px 20px;
-    border: 1.5px solid #e5e5e5;
-    border-radius: 8px;
-    font-size: 13px;
-    font-weight: 600;
-    color: #555;
-    transition: all 0.2s;
-    text-decoration: none;
-}
 .btn-fr-back:hover {
     background: #f5f5f5;
     color: #333;
@@ -2070,7 +2059,7 @@ a {
    ================================================ */
 .berita-hero {
     width: 100%;
-    height: 180px;
+    height: 160px;
     overflow: hidden;
 }
 .berita-hero-img {
@@ -2083,8 +2072,10 @@ a {
     padding: 24px 20px 48px;
 }
 .berita-wrap {
-    max-width: 900px;
+    max-width: 1020px;
     margin: 0 auto;
+    padding: 24px 28px;
+    margin-bottom: 16px;
 }
 .berita-page-header {
     text-align: center;
@@ -2166,12 +2157,12 @@ a {
     padding: 24px 20px 48px;
 }
 .berita-detail-wrap {
-    max-width: 1000px;
+    max-width: 1020px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 260px;
     gap: 24px;
     align-items: start;
+    padding: 24px 28px;
+    margin-bottom: 16px;
 }
 .berita-detail-content {
 }
@@ -2205,6 +2196,8 @@ a {
     font-size: 13.5px;
     color: #333;
     line-height: 1.8;
+    margin-bottom: 14px;
+    text-align: justify;
 }
 .berita-detail-isi h3 {
     font-size: 15px;
@@ -2296,11 +2289,13 @@ a {
     padding: 24px 20px 48px;
 }
 .tentang-wrap {
-    max-width: 860px;
+    max-width: 1020px;
     margin: 0 auto;
+    padding: 24px 28px;
+    margin-bottom: 16px;
 }
 .tentang-section-title {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 800;
     color: #1a1a1a;
     margin: 20px 0 24px;
@@ -2315,6 +2310,8 @@ a {
 .tentang-logo-wrap {
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding-top: 85px;
 }
 .tentang-text p {
     font-size: 13.5px;
@@ -2368,6 +2365,15 @@ a {
 .team-nim {
     font-size: 11px;
     color: #888;
+}
+.team-row-bottom {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+.team-row-bottom .team-card {
+    flex: 0 0 calc(33.333% - 11px);
 }
 
 /* ================================================
@@ -2672,7 +2678,6 @@ a {
     letter-spacing: 0.5px;
     margin-bottom: 14px;
 }
-
 /* GEJALA */
 .admin-gejala-card {
     background: #fff;
@@ -2712,7 +2717,8 @@ a {
     background: #fff;
     border: 1px solid #e5e5e5;
     border-radius: 10px;
-    overflow: hidden;
+    overflow: visible;
+    margin-bottom: 20px;
 }
 .admin-table-head {
     display: flex;
@@ -2997,14 +3003,16 @@ a {
 .admin-filter-panel {
     position: absolute;
     right: 0;
-    top: calc(100%+4px);
+    top: calc(100% + 4px);
     width: 260px;
     background: #fff;
     border: 1px solid #e5e5e5;
     border-radius: 10px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-    z-index: 100;
+    z-index: 9999;
     padding: 14px;
+    max-height: 350px;
+    overflow-y: auto;
 }
 .admin-filter-section {
     border-bottom: 1px solid #f0f0f0;
@@ -3020,8 +3028,8 @@ a {
     gap: 6px;
     font-size: 12px;
     color: #333;
-    font-weight: 500;
-    margin-bottom: 4px;
+    font-weight: 400;
+    margin-bottom: 8px;
     cursor: pointer;
 }
 .admin-filter-label input {
@@ -3074,6 +3082,23 @@ a {
 }
 .admin-form-group {
     margin-bottom: 14px;
+}
+.admin-form-group .ck-editor {
+    border-radius: 8px !important;
+}
+.admin-form-group .ck-editor__top {
+    border-top-left-radius: 8px !important;
+    border-top-right-radius: 8px !important;
+}
+.admin-form-group .ck-editor__editable_inline {
+    border-bottom-left-radius: 8px !important;
+    border-bottom-right-radius: 8px !important;
+}
+/* Mengubah warna highlight border merah bawaan template Anda saat editor aktif */
+.admin-form-group
+    .ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused {
+    border-color: #a83232 !important; /* Samakan dengan warna merah SIDENI */
+    box-shadow: 0 0 5px rgba(168, 50, 50, 0.2) !important;
 }
 .admin-form-row {
     display: grid;
@@ -3179,7 +3204,140 @@ a {
     cursor: pointer;
     color: inherit;
 }
+/* --- KELOLA ADMIN KUSTOM STYLE --- */
 
+/* Deskripsi sub-judul halaman */
+.admin-page-desc {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 20px;
+}
+/* Notifikasi / Alert System */
+.alert-admin {
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    font-size: 13px;
+}
+.alert-success {
+    background: #e8f5e9;
+    border-left: 4px solid #388e3c;
+    color: #256029;
+}
+.alert-error {
+    background: #ffebee;
+    border-left: 4px solid #c62828;
+    color: #c62828;
+}
+
+/* Box alert validasi error form */
+.alert-validation {
+    background: #ffebee;
+    border-left: 4px solid #c62828;
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin-bottom: 14px;
+    font-size: 12px;
+    color: #c62828;
+}
+.alert-validation-list {
+    margin: 0;
+    padding-left: 16px;
+}
+
+/* Pembungkus tabel responsive */
+.admin-table-responsive {
+    overflow-x: auto;
+}
+
+/* Desain Badge Role Pengguna */
+.badge-role {
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    display: inline-block;
+}
+.badge-superadmin {
+    background: #d32f2f;
+    color: #fff;
+}
+.badge-admin {
+    background: #e0e0e0;
+    color: #555;
+}
+
+/* Tombol Aksi Hapus Admin */
+.btn-delete-admin {
+    background: #ffebee;
+    color: #c62828;
+    border: none;
+    padding: 5px 14px;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+.btn-delete-admin:hover {
+    background: #ffcdd2;
+}
+
+/* Status teks penanda akun yang sedang aktif login */
+.text-current-user {
+    font-size: 12px;
+    color: #aaa;
+}
+
+/* Bagian dalam/body dari card form */
+.admin-card-body {
+    padding: 20px;
+}
+
+/* Form Grouping & Field input */
+.form-group-field {
+    margin-bottom: 14px;
+}
+.form-group-field-lg {
+    margin-bottom: 20px;
+}
+.form-field-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #555;
+    display: block;
+    margin-bottom: 4px;
+}
+.form-field-input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 13px;
+    box-sizing: border-box;
+    background-color: #fff;
+    transition: border-color 0.2s ease;
+}
+.form-field-input:focus {
+    border-color: #d32f2f;
+    outline: none;
+}
+/* Tombol Submit Tambah Admin */
+.btn-submit-admin {
+    width: 100%;
+    background: #d32f2f;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.btn-submit-admin:hover {
+    background: #b71c1c;
+}
 /* ADMIN FOOTER */
 .admin-footer {
     padding: 14px 24px;
@@ -3240,29 +3398,39 @@ a {
 }
 .admin-logout-actions {
     display: flex;
-    gap: 10px;
+    gap: 20px;
     justify-content: center;
+}
+.admin-logout-actions form {
+    flex: 1;
+    display: block;
+    width: 100%;
 }
 .btn-cancel-logout {
     flex: 1;
-    padding: 8px;
+    width: 100%;
+    padding: 10px 8px; /* Sedikit ditambah padding atas-bawahnya */
     border: 1.5px solid #e5e5e5;
     border-radius: 7px;
     background: #fff;
-    font-size: 13px;
+    color: #333; /* Warna teks abu-abu gelap/hitam */
+    font-size: 14px;
     font-weight: 600;
     cursor: pointer;
+    text-align: center;
 }
 .btn-confirm-logout {
     flex: 1;
-    padding: 8px;
-    background: #3b82f6;
+    width: 100%;
+    padding: 10px 8px;
+    background: #3b82f6; /* Warna biru primer */
     color: #fff;
     border: none;
     border-radius: 7px;
-    font-size: 13px;
-    font-weight: 700;
+    font-size: 14px;
+    font-weight: 600;
     cursor: pointer;
+    text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -3278,13 +3446,6 @@ a {
     }
     .hasil-profil-grid {
         grid-template-columns: 1fr 1fr;
-    }
-    .admin-layout {
-        flex-direction: column;
-    }
-    .admin-sidebar {
-        width: 100%;
-        min-height: auto;
     }
     .berita-detail-wrap {
         grid-template-columns: 1fr;
@@ -3523,4 +3684,96 @@ a {
 }
 .admin-empty-state p {
     font-size: 13px;
+}
+
+/* PROFIL ADMIN */
+.admin-profil-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+}
+.admin-profil-card {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+.admin-profil-avatar {
+    width: 56px;
+    height: 56px;
+    background: #8b0000;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+.admin-profil-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.admin-profil-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+.admin-profil-email {
+    font-size: 13px;
+    color: #666;
+}
+.admin-profil-badge {
+    display: inline-block;
+    background: #8b0000;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 20px;
+    margin-top: 2px;
+}
+.admin-profil-form-card {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 24px;
+}
+.admin-profil-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+.admin-profil-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+.admin-profil-input {
+    padding: 9px 12px;
+    border: 1px solid #e5e5e5;
+    border-radius: 7px;
+    font-size: 13px;
+    color: #1a1a1a;
+    outline: none;
+    transition: border 0.2s;
+}
+.admin-profil-input:focus {
+    border-color: #8b0000;
+}
+.input-error {
+    border-color: #d32f2f !important;
+}
+.admin-profil-error {
+    font-size: 11px;
+    color: #d32f2f;
 }

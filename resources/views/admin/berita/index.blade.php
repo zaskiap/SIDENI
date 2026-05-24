@@ -11,8 +11,8 @@
     <div class="admin-content">
         @include('admin.partials.topbar')
         <main class="admin-main">
-            <div class="admin-page-header">
-                <h1 class="admin-page-title">Berita</h1>
+           <div class="admin-page-header" style="align-items: center;">
+    <h1 class="admin-page-title" style="margin:0; line-height:1;">Berita</h1>
                 <a href="{{ route('admin.berita.create') }}" class="btn-admin-add">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
                     Tambah Berita
@@ -63,7 +63,7 @@
                                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
                                 Edit
                             </a>
-                            <form method="POST" action="{{ route('admin.berita.destroy', $b->id) }}" style="display:inline" onsubmit="return confirm('Hapus berita ini?')">
+                            <form method="POST" action="{{ route('admin.berita.destroy', $b->id) }}" style="display:inline" onsubmit="return confirm('Apaka anda yakin ingin menghapus berita ini?')">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn-admin-hapus">

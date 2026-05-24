@@ -30,6 +30,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/skrinning',      [SkrinningController::class,   'index'])->name('skrinning');
     Route::post('/skrinning',     [SkrinningController::class,   'simpan'])->name('skrinning.simpan');
     Route::get('/hasil',          [SkrinningController::class,   'hasil'])->name('hasil');
+    Route::get('/hasil/{id}',     [SkrinningController::class,   'hasilDetail'])->name('hasil.detail');
     Route::get('/riwayat',        [SkrinningController::class,   'riwayat'])->name('riwayat');
     Route::get('/faktor-risiko',  [FaktorRisikoController::class,'index'])->name('faktor-risiko');
     Route::post('/faktor-risiko', [FaktorRisikoController::class,'update'])->name('faktor-risiko.update');
@@ -65,8 +66,19 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('/pelaporan',       [\App\Http\Controllers\Admin\PelaporanController::class, 'index'])->name('pelaporan');
         Route::get('/pelaporan/cetak', [\App\Http\Controllers\Admin\PelaporanController::class, 'cetak'])->name('pelaporan.cetak');
 
+        // PROFIL ADMIN
+        Route::get ('/profil', [\App\Http\Controllers\Admin\ProfilController::class, 'index'])->name('profil');
+        Route::put ('/profil', [\App\Http\Controllers\Admin\ProfilController::class, 'update'])->name('profil.update');
+        
         // NOTIFIKASI
         Route::delete('/notifikasi/{notifikasi}', [\App\Http\Controllers\Admin\NotifikasiController::class,'hapus'])->name('notifikasi.hapus');
         Route::delete('/notifikasi',              [\App\Http\Controllers\Admin\NotifikasiController::class,'hapusSemua'])->name('notifikasi.hapus-semua');
+
+         // ===== KELOLA ADMIN (HANYA SUPERADMIN) ← TAMBAHKAN INI =====
+        Route::middleware('superadmin')->group(function () {
+        Route::get('/kelola-admin',        [\App\Http\Controllers\Admin\KelolaAdminController::class, 'index'])->name('kelola-admin.index');
+        Route::post('/kelola-admin',       [\App\Http\Controllers\Admin\KelolaAdminController::class, 'store'])->name('kelola-admin.store');
+        Route::delete('/kelola-admin/{id}',[\App\Http\Controllers\Admin\KelolaAdminController::class, 'destroy'])->name('kelola-admin.destroy');
+        });
     });
 });

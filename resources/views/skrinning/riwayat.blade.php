@@ -10,10 +10,10 @@
 @include('partials.header',['auth'=>true])
 <main class="riwayat-main">
     <div class="riwayat-wrap">
-        <a href="{{ route('beranda') }}" class="page-back">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12,8 8,12 12,16"/><line x1="16" y1="12" x2="8" y2="12"/></svg>
-            Riwayat Skrining
-        </a>
+        <div class="breadcrumb-bar">
+            <a href="{{ route('beranda') }}" class="bc-link">Beranda</a>
+            <span class="bc-sep">›</span><span>Riwayat Skrining</span>
+        </div>
 
         {{-- PROFIL PENGGUNA --}}
         <div class="riwayat-card">
@@ -50,7 +50,8 @@
                     elseif($r->hasil==='Risiko Sedang') $rc='#f59e0b';
                     else $rc='#16a34a';
                 @endphp
-                <div class="riwayat-item">
+                <a href="{{ route('hasil.detail', $r->id_skrinning) }}" style="text-decoration:none;color:inherit;display:block">
+                <div class="riwayat-item" style="cursor:pointer">
                     <div class="riwayat-item-tanggal">{{ $r->tanggal->translatedFormat('d F Y') }}</div>
                     <div class="riwayat-item-hasil" style="color:{{ $rc }};font-weight:700">{{ $r->hasil }}</div>
                     <div class="riwayat-item-skor">Skor: {{ $r->skor_total }}</div>

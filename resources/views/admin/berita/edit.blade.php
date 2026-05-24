@@ -57,7 +57,7 @@
 
                     <div class="admin-form-group">
                         <label class="admin-form-label">ISI BERITA <span class="required">*</span></label>
-                        <textarea name="isi" rows="12" class="admin-form-input admin-form-textarea" required>{{ old('isi', $berita->isi) }}</textarea>
+                        <textarea id="editor" name="isi" rows="12" class="admin-form-input admin-form-textarea">{{ old('isi', $berita->isi) }}</textarea>
                     </div>
 
                     <div class="admin-form-group">

@@ -8,9 +8,9 @@
         <h3>Keluar dari Aplikasi</h3>
         <p>Apakah Anda yakin ingin keluar dari aplikasi SIDENI?</p>
         <div class="admin-logout-actions">
-            <button onclick="hideAdminLogout()" class="btn-cancel-logout">Tidak</button>
-            <form method="POST" action="{{ route('admin.logout') }}">
+            <form method="POST" action="{{ route('admin.logout') }}" style="display: flex; gap: 20px; width: 100%;">
                 @csrf
+                <button type="button" onclick="event.preventDefault(); hideAdminLogout();" class="btn-cancel-logout">Tidak</button>
                 <button type="submit" class="btn-confirm-logout">Ya</button>
             </form>
         </div>

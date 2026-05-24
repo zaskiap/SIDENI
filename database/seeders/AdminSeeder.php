@@ -1,4 +1,5 @@
 <?php
+
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
@@ -9,10 +10,24 @@ class AdminSeeder extends Seeder
 {
     public function run(): void
     {
-        Admin::create([
-            'name'     => 'Super Admin',
-            'email'    => 'admin@sideni.com',
-            'password' => Hash::make('admin123'),
-        ]);
+        // Super Admin — bisa kelola admin lain
+        Admin::updateOrCreate(
+            ['email' => 'admin@sideni.com'],
+            [
+                'name'     => 'Super Admin',
+                'password' => Hash::make('admin123'),
+                'role'     => 'superadmin',
+            ]
+        );
+
+        // Admin biasa — tidak bisa kelola admin lain
+        Admin::updateOrCreate(
+            ['email' => 'admin2@sideni.com'],
+            [
+                'name'     => 'Admin Biasa',
+                'password' => Hash::make('admin456'),
+                'role'     => 'admin',
+            ]
+        );
     }
 }
