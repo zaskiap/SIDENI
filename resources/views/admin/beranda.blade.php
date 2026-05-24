@@ -36,13 +36,15 @@
             <div class="admin-chart-grid">
                 <div class="admin-chart-card">
                     <div class="admin-chart-title">PRESENTASE FAKTOR RISIKO</div>
-                    <canvas id="chartFaktor" height="160"></canvas>
+                    <canvas id="chartFaktor" height="140"></canvas>
                 </div>
-                <div class="admin-chart-card">
-                    <div class="admin-chart-title">PRESENTASE JENIS KELAMIN</div>
-                    <canvas id="chartKelamin" height="160"></canvas>
-                </div>
-            </div>
+<div class="admin-chart-card" style="padding-bottom: 40px;">
+    <div class="admin-chart-title">PRESENTASE JENIS KELAMIN</div>
+    <div style="position:relative; height:280px;">
+        <canvas id="chartKelamin"></canvas>
+    </div>
+</div>
+</div>
 
             {{-- TOP GEJALA --}}
             <div class="admin-gejala-card">
@@ -88,6 +90,7 @@ new Chart(document.getElementById('chartKelamin'),{
         }]
     },
     options:{
+        maintainAspectRatio: false,
         cutout: '70%',
         plugins:{legend:{position:'bottom',labels:{font:{size:11},boxWidth:12}}}
     }

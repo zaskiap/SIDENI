@@ -2669,6 +2669,8 @@ a {
     border: 1px solid #e5e5e5;
     border-radius: 10px;
     padding: 18px 20px;
+    max-height: 320px;
+    overflow: hidden;
 }
 .admin-chart-title {
     font-size: 11px;
@@ -3686,71 +3688,93 @@ a {
     font-size: 13px;
 }
 
-/* PROFIL ADMIN */
-.admin-profil-wrap {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    max-width: 600px;
-}
-.admin-profil-card {
+/* PROFIL ADMIN — HEADER CARD */
+.admin-profil-header {
     background: #fff;
     border: 1px solid #e5e5e5;
-    border-radius: 10px;
+    border-radius: 10px 10px 0 0;
     padding: 24px;
     display: flex;
     align-items: center;
     gap: 18px;
+    border-bottom: 1px solid #e5e5e5;
 }
-.admin-profil-avatar {
-    width: 56px;
-    height: 56px;
-    background: #8b0000;
+
+.admin-profil-header-avatar-wrap {
+    position: relative;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.admin-profil-header-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.admin-profil-header-initials {
+    width: 80px;
+    height: 80px;
+    background: #9ca3af;
     color: #fff;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 22px;
+    font-size: 28px;
     font-weight: 700;
-    flex-shrink: 0;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
 }
-.admin-profil-info {
+
+.admin-profil-header-edit-icon {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    background: #fff;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
     display: flex;
-    flex-direction: column;
-    gap: 4px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    font-size: 12px;
 }
-.admin-profil-name {
-    font-size: 16px;
-    font-weight: 700;
-    color: #1a1a1a;
-}
-.admin-profil-email {
-    font-size: 13px;
-    color: #666;
-}
-.admin-profil-badge {
-    display: inline-block;
-    background: #8b0000;
-    color: #fff;
-    font-size: 11px;
-    font-weight: 700;
-    padding: 2px 10px;
-    border-radius: 20px;
-    margin-top: 2px;
-}
-.admin-profil-form-card {
+
+.admin-profil-form-body {
     background: #fff;
     border: 1px solid #e5e5e5;
-    border-radius: 10px;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
     padding: 24px;
 }
+
+.admin-profil-section-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #8b0000;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+}
+
+.admin-profil-divider {
+    border: none;
+    border-top: 1px solid #e5e5e5;
+    margin: 8px -24px 24px;
+}
+
 .admin-profil-field {
     display: flex;
     flex-direction: column;
     gap: 6px;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
 }
+
 .admin-profil-label {
     font-size: 12px;
     font-weight: 700;
@@ -3758,6 +3782,7 @@ a {
     text-transform: uppercase;
     letter-spacing: 0.4px;
 }
+
 .admin-profil-input {
     padding: 9px 12px;
     border: 1px solid #e5e5e5;
@@ -3765,15 +3790,63 @@ a {
     font-size: 13px;
     color: #1a1a1a;
     outline: none;
+    font-family: Inter, sans-serif;
+    width: 100%;
     transition: border 0.2s;
 }
+
 .admin-profil-input:focus {
     border-color: #8b0000;
 }
-.input-error {
-    border-color: #d32f2f !important;
-}
+
 .admin-profil-error {
     font-size: 11px;
     color: #d32f2f;
+}
+
+.btn-admin-add--full {
+    width: 100%;
+    justify-content: center;
+    padding: 12px;
+}
+.admin-profil-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.admin-profil-email {
+    font-size: 13px;
+    color: #666;
+    margin-top: 2px;
+}
+
+.admin-profil-badge {
+    display: inline-block;
+    background: #fef3c7;
+    color: #92400e;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 14px;
+    border-radius: 99px;
+    margin-top: 8px;
+    border: 1px solid #fcd34d;
+}
+.admin-profil-header-avatar-wrap:hover .admin-profil-header-initials,
+.admin-profil-header-avatar-wrap:hover .admin-profil-header-avatar {
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+.admin-profil-header {
+    margin-bottom: 2px;
+}
+.admin-profil-hint {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 16px;
+    margin-top: -8px;
+}
+.admin-profil-input:focus {
+    border-color: #8b0000;
+    box-shadow: 0 0 0 2px rgba(139, 0, 0, 0.08);
 }
