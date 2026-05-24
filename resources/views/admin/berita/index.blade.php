@@ -11,8 +11,8 @@
     <div class="admin-content">
         @include('admin.partials.topbar')
         <main class="admin-main">
-            <div class="admin-page-header">
-                <h1 class="admin-page-title">Berita</h1>
+           <div class="admin-page-header" style="align-items: center;">
+    <h1 class="admin-page-title" style="margin:0; line-height:1;">Berita</h1>
                 <a href="{{ route('admin.berita.create') }}" class="btn-admin-add">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
                     Tambah Berita

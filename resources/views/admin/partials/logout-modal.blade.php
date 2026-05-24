@@ -7,14 +7,13 @@
         </div>
         <h3>Keluar dari Aplikasi</h3>
         <p>Apakah Anda yakin ingin keluar dari aplikasi SIDENI?</p>
-        <div class="admin-logout-actions">
-            <button onclick="hideAdminLogout()" class="btn-cancel-logout">Tidak</button>
-            <form method="POST" action="{{ route('admin.logout') }}">
-                @csrf
-                <button type="submit" class="btn-confirm-logout">Ya</button>
-            </form>
-        </div>
-    </div>
+ <div class="admin-logout-actions" style="display:flex; gap:10px;">
+    <button class="btn-cancel-logout" onclick="hideAdminLogout()" style="flex:1; padding:10px 8px; border:1.5px solid #e5e5e5; border-radius:7px; background:#fff; font-size:13px; font-weight:600; cursor:pointer;">Tidak</button>
+    <form method="POST" action="{{ route('admin.logout') }}" style="flex:1; display:flex;">
+        @csrf
+        <button type="submit" style="width:100%; padding:10px 8px; background:#3b82f6; color:#fff; border:none; border-radius:7px; font-size:13px; font-weight:700; cursor:pointer;">Ya</button>
+    </form>
+</div>
 </div>
 <script>
 function showAdminLogout(){document.getElementById('adminLogoutOverlay').classList.add('show');}

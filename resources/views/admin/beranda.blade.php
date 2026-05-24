@@ -12,7 +12,7 @@
     <div class="admin-content">
         @include('admin.partials.topbar')
         <main class="admin-main">
-            <h1 class="admin-page-title">Beranda</h1>
+            <h1 class="admin-page-title">Beranda</h1><br>
 
             {{-- STAT CARDS --}}
             <div class="admin-stat-grid">
@@ -88,6 +88,7 @@ new Chart(document.getElementById('chartKelamin'),{
         }]
     },
     options:{
+        cutout: '70%',
         plugins:{legend:{position:'bottom',labels:{font:{size:11},boxWidth:12}}}
     }
 });

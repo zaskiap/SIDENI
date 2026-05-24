@@ -65,6 +65,10 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('/pelaporan',       [\App\Http\Controllers\Admin\PelaporanController::class, 'index'])->name('pelaporan');
         Route::get('/pelaporan/cetak', [\App\Http\Controllers\Admin\PelaporanController::class, 'cetak'])->name('pelaporan.cetak');
 
+        // PROFIL ADMIN
+        Route::get ('/profil', [\App\Http\Controllers\Admin\ProfilController::class, 'index'])->name('profil');
+        Route::put ('/profil', [\App\Http\Controllers\Admin\ProfilController::class, 'update'])->name('profil.update');
+        
         // NOTIFIKASI
         Route::delete('/notifikasi/{notifikasi}', [\App\Http\Controllers\Admin\NotifikasiController::class,'hapus'])->name('notifikasi.hapus');
         Route::delete('/notifikasi',              [\App\Http\Controllers\Admin\NotifikasiController::class,'hapusSemua'])->name('notifikasi.hapus-semua');
