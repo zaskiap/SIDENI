@@ -24,7 +24,7 @@
 
             <!-- ILUSTRASI KANAN -->
             <div class="homepage-illustration" data-animate="fadeInRight">
-                <img src="{{ asset('images/cardiologist.png') }}"
+                <img src="{{ asset('images/gambar-homepage-removebg-preview.png') }}"
                      alt="Dokter SIDENI"
                      class="homepage-img" />
             </div>

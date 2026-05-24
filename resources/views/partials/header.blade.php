@@ -1,9 +1,9 @@
 <header class="sideni-header">
     <div class="header-inner">
-        <div>
-            <span class="logo-title">S I D E N I</span><br>
-            <span class="logo-sub">SISTEM DETEKSI DINI HIV/AIDS</span>
-        </div>
+    <a href="{{ url('/') }}" class="header-logo">
+    <span class="logo-title">S I D E N I</span>
+    <span class="logo-sub">SISTEM DETEKSI DINI HIV/AIDS</span>
+</a>
 
         @if(isset($auth) && $auth)
         <nav class="header-nav">
