@@ -11,10 +11,10 @@
         <p class="logout-desc">Apakah Anda yakin ingin keluar dari aplikasi SIDENI?</p>
         <div class="logout-actions">
             <button class="logout-btn-cancel" onclick="hideLogoutModal()">Tidak</button>
-            <form method="POST" action="{{ route('logout') }}">
-                @csrf
-                <button type="submit" class="logout-btn-confirm">Ya</button>
-            </form>
+            <form method="POST" action="{{ route('logout') }}" style="flex:1; display:block;">
+    @csrf
+    <button type="submit" class="logout-btn-confirm">Ya</button>
+</form>
         </div>
     </div>
 </div>

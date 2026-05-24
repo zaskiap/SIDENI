@@ -40,10 +40,12 @@
 
         {{-- ADMIN INFO --}}
         <div class="admin-info">
-            <span class="admin-name">{{ strtoupper(session('admin.name','ADMIN')) }}</span>
-            <div class="admin-avatar">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="#888"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-            </div>
+            <a href="{{ route('admin.profil') }}" style="text-decoration:none; color:inherit; display:flex; align-items:center; gap:10px;">
+                <span class="admin-name">{{ strtoupper(session('admin.name','ADMIN')) }}</span>
+                <div class="admin-avatar">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="#888"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+                </div>
+            </a>
         </div>
     </div>
 </div>
