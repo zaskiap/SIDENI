@@ -40,9 +40,9 @@
                 </div>
 <div class="admin-chart-card" style="padding-bottom: 40px;">
     <div class="admin-chart-title">PRESENTASE JENIS KELAMIN</div>
-    <div style="position:relative; height:280px;">
-        <canvas id="chartKelamin"></canvas>
-    </div>
+  <div class="admin-chart-kelamin-wrap">
+    <canvas id="chartKelamin"></canvas>
+</div>
 </div>
 </div>
 

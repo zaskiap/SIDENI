@@ -2680,6 +2680,10 @@ a {
     letter-spacing: 0.5px;
     margin-bottom: 14px;
 }
+.admin-chart-kelamin-wrap {
+    position: relative;
+    height: 265px;
+}
 /* GEJALA */
 .admin-gejala-card {
     background: #fff;
@@ -3691,13 +3695,12 @@ a {
 /* PROFIL ADMIN — HEADER CARD */
 .admin-profil-header {
     background: #fff;
-    border: 1px solid #e5e5e5;
-    border-radius: 10px 10px 0 0;
     padding: 24px;
     display: flex;
     align-items: center;
     gap: 18px;
     border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 0;
 }
 
 .admin-profil-header-avatar-wrap {
@@ -3746,10 +3749,6 @@ a {
 }
 
 .admin-profil-form-body {
-    background: #fff;
-    border: 1px solid #e5e5e5;
-    border-top: none;
-    border-radius: 0 0 10px 10px;
     padding: 24px;
 }
 
@@ -3761,11 +3760,18 @@ a {
     letter-spacing: 0.5px;
     margin-bottom: 16px;
 }
+.admin-profil-card {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    overflow: hidden;
+}
 
 .admin-profil-divider {
+    height: 1px;
+    background: #e5e5e5;
+    margin: 0 -24px;
     border: none;
-    border-top: 1px solid #e5e5e5;
-    margin: 8px -24px 24px;
 }
 
 .admin-profil-field {
@@ -3849,4 +3855,75 @@ a {
 .admin-profil-input:focus {
     border-color: #8b0000;
     box-shadow: 0 0 0 2px rgba(139, 0, 0, 0.08);
+}
+.admin-profil-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    margin-top: 24px;
+}
+
+.btn-admin-simpan-profil {
+    padding: 9px 20px;
+    width: auto;
+    background: #3b82f6;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-admin-simpan-profil:hover {
+    background: #3b82f6;
+}
+
+.btn-admin-batal {
+    padding: 9px 20px;
+    width: auto;
+    background: #f5f5f5;
+    color: #555;
+    border: 1px solid #e5e5e5;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+}
+
+.admin-profil-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    justify-content: flex-end;
+}
+/* Judul section (EDIT PROFIL, GANTI PASSWORD) */
+.admin-chart-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #8b0000;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+}
+
+/* Label field (NAMA, EMAIL, dst) */
+.admin-profil-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    display: block;
+    font-family: Inter, sans-serif;
+}
+
+/* Nama akun di header profil */
+.admin-profil-name {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a1a1a;
 }
