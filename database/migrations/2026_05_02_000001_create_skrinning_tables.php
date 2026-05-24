@@ -25,14 +25,14 @@ return new class extends Migration {
             $table->boolean('g_bengkak_kelenjar_leher')->default(false);
             $table->boolean('g_bengkak_kelenjar_ketiak')->default(false);
             // Gejala fase 2 (2 gejala)
-            $table->boolean('g_kurang_sel_darah_putih')->default(false);
-            $table->boolean('g_turun_bb_kurang_10')->default(false);
+            $table->boolean('g_luka_yang_lama_sembuh')->default(false);
+            $table->boolean('g_turun_bb_kurang_3kg')->default(false);
             // Gejala fase 3 (6 gejala)
             $table->boolean('g_jamur_mulut')->default(false);
-            $table->boolean('g_jamur_tenggorokan')->default(false);
-            $table->boolean('g_turun_bb_lebih_10')->default(false);
+            $table->boolean('g_radang_tenggorokan_3')->default(false);
+            $table->boolean('g_turun_bb_lebih_3kg')->default(false);
             $table->boolean('g_diare_1_bulan')->default(false);
-            $table->boolean('g_tbc_paru')->default(false);
+            $table->boolean('g_gangguan_pernafasan')->default(false);
             $table->boolean('g_infeksi_bakteri_berat')->default(false);
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');

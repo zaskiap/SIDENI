@@ -27,7 +27,7 @@
             <div class="fase-card">
                 <div class="fase-header"><span class="fase-badge">2</span><div><h2 class="fase-title">Pilih Gejala Fase Kedua yang Dirasakan</h2><p class="fase-sub">Gejala Fase Kedua</p></div></div>
                 <div class="gejala-grid">
-                    @foreach(['g_kurang_sel_darah_putih'=>'Luka yang lama sembuh','g_turun_bb_kurang_10'=>'Penurunan berat badan kurang dari 10% tanpa penyebab yang jelas'] as $col=>$label)
+                    @foreach(['g_luka_yang_lama_sembuh'=>'Luka yang lama sembuh','g_turun_bb_kurang_3kg'=>'Penurunan Berat Badan kurang dari 3 kg Tanpa Sebab Jelas'] as $col=>$label)
                     <label class="gejala-item"><input type="checkbox" name="{{ $col }}" value="1"><span>{{ $label }}</span></label>
                     @endforeach
                 </div>
@@ -35,7 +35,7 @@
             <div class="fase-card">
                 <div class="fase-header"><span class="fase-badge">3</span><div><h2 class="fase-title">Pilih Gejala Fase Ketiga yang Dirasakan</h2><p class="fase-sub">Gejala Fase Ketiga</p></div></div>
                 <div class="gejala-grid">
-                    @foreach(['g_jamur_mulut'=>'Infeksi jamur pada mulut','g_infeksi_bakteri_berat'=>'Infeksi bakteri berat seperti pneumonia, toksosplasmosis, meningitis, kanker','g_tbc_paru'=>'Gangguan sistem pernafasan, sesak, dan batuk lebih dari 3 minggu','g_jamur_tenggorokan'=>'Radang tenggorokan lebih dari 3 minggu','g_turun_bb_lebih_10'=>'Penurunan berat badan drastis lebih dari 10% tanpa penyebab yang jelas','g_diare_1_bulan'=>'Diare lebih dari 1 bulan tanpa sebab yang jelas'] as $col=>$label)
+                    @foreach(['g_jamur_mulut'=>'Infeksi jamur pada mulut','g_infeksi_bakteri_berat'=>'Infeksi bakteri berat seperti pneumonia, toksosplasmosis, meningitis, kanker','g_gangguan_pernafasan'=>'Gangguan sistem pernafasan, sesak, dan batuk lebih dari 3 minggu','g_radang_tenggorokan_3'=>'Radang tenggorokan lebih dari 3 minggu','g_turun_bb_lebih_3kg'=>'Penurunan Berat Badan drastis lebih dari 3 kg Tanpa Sebab Jelas','g_diare_1_bulan'=>'Diare lebih dari 1 bulan tanpa sebab yang jelas'] as $col=>$label)
                     <label class="gejala-item"><input type="checkbox" name="{{ $col }}" value="1"><span>{{ $label }}</span></label>
                     @endforeach
                 </div>
