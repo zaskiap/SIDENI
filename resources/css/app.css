@@ -3186,7 +3186,140 @@ a {
     cursor: pointer;
     color: inherit;
 }
+/* --- KELOLA ADMIN KUSTOM STYLE --- */
 
+/* Deskripsi sub-judul halaman */
+.admin-page-desc {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 20px;
+}
+/* Notifikasi / Alert System */
+.alert-admin {
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    font-size: 13px;
+}
+.alert-success {
+    background: #e8f5e9;
+    border-left: 4px solid #388e3c;
+    color: #256029;
+}
+.alert-error {
+    background: #ffebee;
+    border-left: 4px solid #c62828;
+    color: #c62828;
+}
+
+/* Box alert validasi error form */
+.alert-validation {
+    background: #ffebee;
+    border-left: 4px solid #c62828;
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin-bottom: 14px;
+    font-size: 12px;
+    color: #c62828;
+}
+.alert-validation-list {
+    margin: 0;
+    padding-left: 16px;
+}
+
+/* Pembungkus tabel responsive */
+.admin-table-responsive {
+    overflow-x: auto;
+}
+
+/* Desain Badge Role Pengguna */
+.badge-role {
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    display: inline-block;
+}
+.badge-superadmin {
+    background: #d32f2f;
+    color: #fff;
+}
+.badge-admin {
+    background: #e0e0e0;
+    color: #555;
+}
+
+/* Tombol Aksi Hapus Admin */
+.btn-delete-admin {
+    background: #ffebee;
+    color: #c62828;
+    border: none;
+    padding: 5px 14px;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+.btn-delete-admin:hover {
+    background: #ffcdd2;
+}
+
+/* Status teks penanda akun yang sedang aktif login */
+.text-current-user {
+    font-size: 12px;
+    color: #aaa;
+}
+
+/* Bagian dalam/body dari card form */
+.admin-card-body {
+    padding: 20px;
+}
+
+/* Form Grouping & Field input */
+.form-group-field {
+    margin-bottom: 14px;
+}
+.form-group-field-lg {
+    margin-bottom: 20px;
+}
+.form-field-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #555;
+    display: block;
+    margin-bottom: 4px;
+}
+.form-field-input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 13px;
+    box-sizing: border-box;
+    background-color: #fff;
+    transition: border-color 0.2s ease;
+}
+.form-field-input:focus {
+    border-color: #d32f2f;
+    outline: none;
+}
+/* Tombol Submit Tambah Admin */
+.btn-submit-admin {
+    width: 100%;
+    background: #d32f2f;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.btn-submit-admin:hover {
+    background: #b71c1c;
+}
 /* ADMIN FOOTER */
 .admin-footer {
     padding: 14px 24px;

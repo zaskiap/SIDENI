@@ -73,5 +73,12 @@ Route::prefix('admin')->name('admin.')->group(function () {
         // NOTIFIKASI
         Route::delete('/notifikasi/{notifikasi}', [\App\Http\Controllers\Admin\NotifikasiController::class,'hapus'])->name('notifikasi.hapus');
         Route::delete('/notifikasi',              [\App\Http\Controllers\Admin\NotifikasiController::class,'hapusSemua'])->name('notifikasi.hapus-semua');
+
+         // ===== KELOLA ADMIN (HANYA SUPERADMIN) ← TAMBAHKAN INI =====
+        Route::middleware('superadmin')->group(function () {
+        Route::get('/kelola-admin',        [\App\Http\Controllers\Admin\KelolaAdminController::class, 'index'])->name('kelola-admin.index');
+        Route::post('/kelola-admin',       [\App\Http\Controllers\Admin\KelolaAdminController::class, 'store'])->name('kelola-admin.store');
+        Route::delete('/kelola-admin/{id}',[\App\Http\Controllers\Admin\KelolaAdminController::class, 'destroy'])->name('kelola-admin.destroy');
+        });
     });
 });
