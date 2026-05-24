@@ -3006,8 +3006,8 @@ a {
     gap: 6px;
     font-size: 12px;
     color: #333;
-    font-weight: 500;
-    margin-bottom: 4px;
+    font-weight: 400;
+    margin-bottom: 8px;
     cursor: pointer;
 }
 .admin-filter-label input {
@@ -3060,6 +3060,23 @@ a {
 }
 .admin-form-group {
     margin-bottom: 14px;
+}
+.admin-form-group .ck-editor {
+    border-radius: 8px !important;
+}
+.admin-form-group .ck-editor__top {
+    border-top-left-radius: 8px !important;
+    border-top-right-radius: 8px !important;
+}
+.admin-form-group .ck-editor__editable_inline {
+    border-bottom-left-radius: 8px !important;
+    border-bottom-right-radius: 8px !important;
+}
+/* Mengubah warna highlight border merah bawaan template Anda saat editor aktif */
+.admin-form-group
+    .ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused {
+    border-color: #a83232 !important; /* Samakan dengan warna merah SIDENI */
+    box-shadow: 0 0 5px rgba(168, 50, 50, 0.2) !important;
 }
 .admin-form-row {
     display: grid;
