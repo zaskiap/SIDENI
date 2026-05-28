@@ -31,10 +31,8 @@ class ProfilController extends Controller
         $admin->name  = $request->name;
         $admin->email = $request->email;
 
-        // Cek perubahan profil SEBELUM save
         $profilChanged = $admin->isDirty(['name', 'email']);
 
-        // Cek apakah password diisi
         $passwordChanged = false;
         if ($request->filled('password')) {
             $admin->password = Hash::make($request->password);
@@ -44,16 +42,15 @@ class ProfilController extends Controller
         if ($request->hasFile('foto')) {
             $file = $request->file('foto');
             $filename = 'admin_' . time() . '.' . $file->getClientOriginalExtension();
-            $file->storeAs('public/foto-admin', $filename);
+            $file->move(public_path('storage/foto-admin'), $filename);
             $admin->foto = $filename;
         }
 
         $admin->save();
 
-        // BARU
-session(['admin.name'  => $admin->name]);
-session(['admin.email' => $admin->email]);
-session(['admin.foto'  => $admin->foto]); // ← tambahkan ini
+        session(['admin.name'  => $admin->name]);
+        session(['admin.email' => $admin->email]);
+        session(['admin.foto'  => $admin->foto]);
 
         if ($passwordChanged && $profilChanged) {
             $message = 'Profil dan password berhasil diperbarui!';

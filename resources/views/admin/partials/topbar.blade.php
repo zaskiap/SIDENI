@@ -36,19 +36,29 @@
                     <div style="padding:16px;text-align:center;font-size:12px;color:#aaa;">Tidak ada notifikasi</div>
                 @endforelse
             </div>
-        </div>
+        </div>{{-- END notif-wrap --}}
 
         {{-- ADMIN INFO --}}
         <div class="admin-info">
             <a href="{{ route('admin.profil') }}" style="text-decoration:none; color:inherit; display:flex; align-items:center; gap:10px;">
                 <span class="admin-name">{{ strtoupper(session('admin.name','ADMIN')) }}</span>
                 <div class="admin-avatar">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="#888"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+                    @if(session('admin.foto'))
+                        <img src="{{ asset('storage/foto-admin/'.session('admin.foto')) }}"
+                             style="width:36px;height:36px;border-radius:50%;object-fit:cover;">
+                    @else
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#888">
+                            <circle cx="12" cy="8" r="4"/>
+                            <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+                        </svg>
+                    @endif
                 </div>
             </a>
-        </div>
-    </div>
-</div>
+        </div>{{-- END admin-info --}}
+
+    </div>{{-- END admin-topbar-right --}}
+</div>{{-- END admin-topbar --}}
+
 <script>
 function toggleNotif(){
     document.getElementById('notifDropdown').classList.toggle('show');
