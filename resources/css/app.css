@@ -775,7 +775,7 @@ a {
     gap: 10px;
     justify-content: center;
 }
-.logout-actons form {
+.logout-actions form {
     flex: 1;
     display: block;
 }
@@ -790,6 +790,7 @@ a {
     font-weight: 600;
     cursor: pointer;
     transition: background 0.2s;
+    box-sizing: border-box;
 }
 .logout-btn-cancel:hover {
     background: #f5f5f5;
@@ -807,6 +808,8 @@ a {
     font-weight: 700;
     cursor: pointer;
     transition: background 0.2s;
+    box-sizing: border-box;
+    height: 100%;
 }
 .logout-btn-confirm:hover {
     background: #2563eb;

@@ -52,7 +52,7 @@
         <div>
             <div class="admin-profil-name">{{ session('admin.name', '-') }}</div>
             <div class="admin-profil-email">{{ session('admin.email', '-') }}</div>
-            <span class="admin-profil-badge">Super Admin</span>
+            <span class="admin-profil-badge">{{ $admin->role }}</span>
         </div>
     </div>
 
@@ -103,3 +103,6 @@
         @include('admin.partials.footer')
     </div>
 </div>
+@include('admin.partials.logout-modal')
+</body>
+</html>

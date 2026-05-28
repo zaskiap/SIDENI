@@ -131,7 +131,9 @@
                 </div>
             </div>
         </main>
+        @include('admin.partials.footer')
     </div>
 </div>
+@include('admin.partials.logout-modal')
 </body>
 </html>
