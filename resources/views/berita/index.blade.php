@@ -36,7 +36,6 @@
                         <p class="berita-grid-tanggal">{{ $b->tanggal->translatedFormat('d F Y') }}</p>
                         <div class="berita-grid-thumb">
                             <img src="{{ $b->thumbnail_url }}" alt="{{ $b->judul }}" onerror="this.src='{{ asset('images/banner-berita.png') }}'">
-
                         </div>
                     </a>
                     @endforeach
