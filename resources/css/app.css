@@ -1776,11 +1776,14 @@ a {
     flex-direction: column;
     gap: 14px;
 }
+.riwayat-wrap .breadcrumb-bar {
+    margin-bottom: 6px;
+}
 .riwayat-card {
     background: #fff;
     border: 1px solid #e5e5e5;
     border-radius: 10px;
-    padding: 20px 24px;
+    padding: 25px 24px;
 }
 .riwayat-section-label {
     font-size: 10px;
