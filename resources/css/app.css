@@ -731,8 +731,8 @@ a {
 .logout-modal {
     background: #fff;
     border-radius: 12px;
-    padding: 30px 28px; /* sebelumnya 40px 36px */
-    max-width: 340px; /* sebelumnya 400px */
+    padding: 27px 22px;
+    max-width: 320px;
     width: 90%;
     text-align: center;
     box-shadow: 0 16px 48px rgba(0, 0, 0, 0.16);
@@ -744,8 +744,8 @@ a {
 }
 
 .logout-icon {
-    width: 46px;
-    height: 46px; /* sebelumnya 56px */
+    width: 44px;
+    height: 44px; /* sebelumnya 56px */
     border: 2px solid #b91c1c;
     border-radius: 50%;
     display: flex;
@@ -759,20 +759,20 @@ a {
 } /* sebelumnya 28px */
 
 .logout-title {
-    font-size: 16px; /* sebelumnya 20px */
+    font-size: 15px; /* sebelumnya 20px */
     font-weight: 800;
     color: #1a1a1a;
     margin-bottom: 7px;
 }
 .logout-desc {
-    font-size: 12.5px; /* sebelumnya 14px */
+    font-size: 12px; /* sebelumnya 14px */
     color: #555;
-    margin-bottom: 22px; /* sebelumnya 28px */
-    line-height: 1.55;
+    margin-bottom: 20px; /* sebelumnya 28px */
+    line-height: 1.5;
 }
 .logout-actions {
     display: flex;
-    gap: 10px;
+    gap: 20px;
     justify-content: center;
 }
 .logout-actions form {
@@ -781,12 +781,12 @@ a {
 }
 .logout-btn-cancel {
     flex: 1;
-    padding: 9px; /* sebelumnya 12px */
-    min-height: 38px;
+    padding: 10px 8px;
     border: 1.5px solid #e5e5e5;
-    border-radius: 8px;
+    border-radius: 7px;
     background: #fff;
-    font-size: 13.5px;
+    color: #333;
+    font-size: 14px;
     font-weight: 600;
     cursor: pointer;
     transition: background 0.2s;
@@ -796,20 +796,18 @@ a {
     background: #f5f5f5;
 }
 .logout-btn-confirm {
-    width: 100%;
     flex: 1;
-    padding: 9px;
-    min-height: 38px;
+    width: 100%;
+    padding: 10px 8px;
     background: #3b82f6;
     color: #fff;
     border: none;
-    border-radius: 8px;
-    font-size: 13.5px;
-    font-weight: 700;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 600;
     cursor: pointer;
     transition: background 0.2s;
     box-sizing: border-box;
-    height: 100%;
 }
 .logout-btn-confirm:hover {
     background: #2563eb;
